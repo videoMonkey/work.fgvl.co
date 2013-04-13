@@ -1,4 +1,29 @@
 {% block content %} 
-	<p>An empty, simple boilerplate for a fresh start.</p>     
-	<!-- TODO: Create my project :-) -->
+
+<div class="page text">
+	<p><small>No. 1, Fall 2012</small></p>
+	<h1>James Fehr</h1>
+	<p><em>Designer, Photographer</em></p>
+</div>
+
+{% for photo in global.photos %}
+
+<div class="page page-foto">
+	<img src="{{ photo.url }}" width="180" height="240" />
+	<p>{{ photo.caption }}</p>
+</div>
+
+{% endfor %}
+
+<div class="page page-text">
+	
+	<a href="tel:+34622506214">+34 622 50 62 14</a>
+	<a href="mailto:james@fgvl.com">james@fgvl.co</a>
+	
+	<h3>Who is James Fehr?</h3>
+	<p>Perhaps my greatest fault is being too broad in my skillset, but web design and photogrpahy are two big passions of mine.</p>
+	
+</div>
+
+
 {% endblock %}
