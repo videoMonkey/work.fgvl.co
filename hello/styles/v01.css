@@ -1,0 +1,13 @@
+/*reset.css*/
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #dee;
+	background-color: #322;
+}
+
+a {
+	color: #ee9;
+	text-decoration: none;
+}
+
+.page em { font-family: georgia; }
