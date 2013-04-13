@@ -5,20 +5,42 @@
 
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
 
+
+    <!-- TODO: Pinned site icons -->
+    <!-- pinned site icons for various applications -->
+    <!-- ios and android -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-icon-144x144-precomposed.png" />
+     
+    <!-- http://mrgan.tumblr.com/post/708404794/ios-app-icon-sizes -->
+     
+    <!-- splash screen for saved app -->
+    <link rel="apple-touch-startup-image" href="/startup.png">
+     
+    <!-- windows -->
+    <!-- http://hicksdesign.co.uk/journal/pinned-sites-in-windows-8 -->
+    <!-- http://www.buildmypinnedsite.com/ -->
+    <meta name="application-name" content="site name"/> 
+    <meta name="msapplication-TileColor" content="#333333"/> 
+    <meta name="msapplication-TileImage" content="windows-touch-icon-144x144.png"/>
+     
+    <!-- opera speeddial 250x160 max and 114 square min -->
+    <!-- http://dev.opera.com/articles/view/opera-speed-dial-enhancements/ -->
+    <link rel="icon" type="image/png" href="opera-speeddial-icon-250x160.png">
+
     <!-- TODO: OpenGraph Tags -->
     <!-- TODO: Twitter Card tags -->
 
     {{ "v01.css" | asset_url | stylesheet_tag }}
     {% block styles %}{% endblock %}
 
-    {% if mixture.debug %}<script type="text/javascript" src="/hello/lib/modernizr-full.2.6.2.js"></script>
-    {% else %}<script type="text/javascript" src="/hello/lib/modernizr-full.2.6.2.min.js"></script>{% endif %}
+    <script type="text/javascript" src="/hello/lib/modernizr.2.6.2.min.js"></script>
 
 </head>
 <body>
-
     {% comment %}{% include "header" %}{% endcomment %}
-
     {% block content %}{% endblock %}
         
     {{ "v01.js" | asset_url | script_tag }}

@@ -58,4 +58,3 @@
 	}
 	
 }( this ));
-console.log("HEllo from Javascript!");
